@@ -1,0 +1,7 @@
+SIGNAL-LEVEL IAAFT SURROGATES
+nonlinear: interval excludes zero in 28 of 32 configurations; median |effect| 0.37 SD; excluded recording-band series 166 of 1200 (by band: 64 Hz 13%, 128 Hz 16%, 256 Hz 25%, 512 Hz 32%, 1024 Hz 17%, 2048 Hz 3%, 4096 Hz 5%, 8192 Hz 0%)
+conventional: interval excludes zero in 24 of 48 configurations; median |effect| 0.06 SD; excluded recording-band series 165 of 1200 (by band: 64 Hz 12%, 128 Hz 16%, 256 Hz 25%, 512 Hz 32%, 1024 Hz 17%, 2048 Hz 3%, 4096 Hz 5%, 8192 Hz 0%)
+median raw difference, experimental recordings: PE -0.002511, LZC78 -23, RSE4 0.005461, RSR 0.00123
+linear control, rms_series surrogates: RSE4 40 accepted, 40 with the same sign, p = 0.00, median difference 0.016; LZC78 40 accepted, 38 with the same sign, p = 0.00, median difference -82; RSR 40 accepted, 38 with the same sign, p = 0.00, median difference 0.0099; PE 40 accepted, 28 with the same sign, p = 0.02, median difference -0.0088
+linear control, band_signal surrogates: RSE4 40 accepted, 20 with the same sign, p = 1.00, median difference -2.3e-05; LZC78 40 accepted, 22 with the same sign, p = 0.52, median difference 1.5; RSR 40 accepted, 20 with the same sign, p = 1.00, median difference 2.1e-06; PE 40 accepted, 21 with the same sign, p = 0.87, median difference -0.00011
+runtime 190 min

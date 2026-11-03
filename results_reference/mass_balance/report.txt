@@ -1,0 +1,3 @@
+water fraction at the start: vermicompost 0.605, soaked hay at the mode of the hay moisture 0.73, mixture 0.65; end-sample representation SD 0.0072
+pooled dry-mass loss, direct: 23.6% (95% interval 20.8-26.3%)
+pooled dry-mass loss, retained water: 20.1% (95% interval 14.1-26.3%)

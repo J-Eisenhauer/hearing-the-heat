@@ -1,0 +1,3 @@
+group,n,T_low,T_high,T_mid,median_abs_difference_mid,n_ci_excludes_zero_mid,n_ci_excludes_zero_somewhere,n_ci_excludes_zero_everywhere,median_share_range,n_branches_cross,n_jackknife_sign_stable_mid
+nonlinear,32,28.0,38.019999999999996,33.01,0.7092862388805482,28,30,16,0.9634146341463414,8,30
+conventional,48,28.0,38.019999999999996,33.01,0.43439693917134503,38,45,8,0.7317073170731707,20,43

@@ -1,0 +1,9 @@
+LEVEL-INVARIANT CONTROL: quantiser per recording (main analysis, quantiser per bucket, in brackets)
+nonlinear (32 configurations): median held-out skill time-only 0.09 (0.33), L 0.17 (0.48); R2 of L 0.42 (0.81); L better than time-only in 29 (30)
+  skill of L on heating / cooling occasions 0.42 / 0.11 (0.70 / 0.42)
+  PE (unchanged): median held-out skill of L 0.31
+95% Bayesian-bootstrap interval excludes 0 (of 32 nonlinear configurations): b 26 (28); d 19 (19); e 24 (22)
+difference between the branches at 33.0 C: median |difference| 0.40 SD (0.71); interval excludes 0 in 22 (28); branches cross in 17 (8)
+roughness of the mean trajectory (24 configurations of LZC78, RSE4, RSR): median 0.86 (0.51), increased in 19; PE 0.72
+|r| of the residuals of L with those of PE in the same band: 1-8 kHz 0.65-0.89 (0.01-0.93); 8192-16384 Hz 0.08-0.22 (0.01-0.10)
+runtime 29 min

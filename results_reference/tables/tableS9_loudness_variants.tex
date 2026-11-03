@@ -1,0 +1,12 @@
+\begin{tabular}{lcccccccc}
+\toprule
+ & \multicolumn{4}{c}{Nonlinear (32)} & \multicolumn{4}{c}{LZC78, RSE$_4$, RSR (24)}\\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Quantiser & time & L & $R^2$ of L & L $>$ time & time & L & $R^2$ of L & L $>$ time\\
+\midrule
+Quantiser per bucket (main analysis) & 0.33 & 0.48 & 0.81 & 30/32 & 0.34 & 0.51 & 0.84 & 23/24\\
+Quantiser per recording (control) & 0.09 & 0.17 & 0.42 & 29/32 & 0.09 & 0.16 & 0.39 & 22/24\\
+Quantiser per 15\,s window & 0.08 & 0.17 & 0.37 & 31/32 & 0.08 & 0.17 & 0.34 & 24/24\\
+Per recording, two median windows only & 0.09 & 0.17 & 0.42 & 27/32 & 0.09 & 0.16 & 0.40 & 21/24\\
+\bottomrule
+\end{tabular}

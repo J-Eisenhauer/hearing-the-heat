@@ -1,0 +1,10 @@
+BAYESIAN BOOTSTRAP (4000 draws): configurations whose 95% interval of the L coefficient excludes 0
+  b: nonlinear 28 of 32, conventional 39 of 48
+  d: nonlinear 19 of 32, conventional 25 of 48
+  e: nonlinear 22 of 32, conventional 38 of 48
+difference between the branches over 28.0-38.0 C (midpoint 33.0 C):
+  nonlinear: median |difference| at the midpoint 0.71 SD; interval excludes zero at the midpoint in 28/32, somewhere in the range in 30, everywhere in 16 (median share 0.96); branches cross in 8; jackknife sign stable at the midpoint in 30
+  conventional: median |difference| at the midpoint 0.43 SD; interval excludes zero at the midpoint in 38/48, somewhere in the range in 45, everywhere in 8 (median share 0.73); branches cross in 20; jackknife sign stable at the midpoint in 43
+  RSR 128 Hz: -1.91 SD (95% interval -2.02 to -1.78)
+  RSR 1024 Hz: -0.54 SD (95% interval -0.85 to -0.20)
+  RSR 4096 Hz: +0.71 SD (95% interval +0.61 to +0.83)

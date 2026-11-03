@@ -1,0 +1,89 @@
+MODEL ANALYSIS (100000 temperature surrogates, seed 20261012)
+
+nonlinear (32 configurations)
+  time-only     skill  0.329   R2 0.545
+  T-only        skill  0.300   R2 0.513   surrogates median 0.073, 95th percentile 0.261, p = 0.02028 (descriptive)
+  L_time        skill  0.397   R2 0.685   surrogates median 0.369, 95th percentile 0.421, p = 0.16212 (descriptive)
+  L             skill  0.485   R2 0.810   surrogates median 0.291, 95th percentile 0.409, p = 0.00003 (primary)
+  L+time        skill  0.493
+  training-mean skill  0.414
+  NP            skill  0.500   R2 0.887
+  L better than time-only in 94%, than T-only in 91%, than both in 28 configurations
+
+conventional (48 configurations)
+  time-only     skill  0.067   R2 0.203
+  T-only        skill  0.071   R2 0.204   surrogates median 0.017, 95th percentile 0.086, p = 0.09398 (descriptive)
+  L_time        skill  0.084   R2 0.310   surrogates median 0.099, 95th percentile 0.159, p = 0.67761 (descriptive)
+  L             skill  0.124   R2 0.360   surrogates median 0.085, 95th percentile 0.147, p = 0.20601 (primary)
+  L+time        skill  0.145
+  training-mean skill  0.030
+  NP            skill  0.178   R2 0.687
+  L better than time-only in 88%, than T-only in 83%, than both in 36 configurations
+
+all (80 configurations)
+  time-only     skill  0.111   R2 0.283
+  T-only        skill  0.121   R2 0.286   surrogates median 0.035, 95th percentile 0.123, p = 0.05404 (descriptive)
+  L_time        skill  0.194   R2 0.495   surrogates median 0.194, 95th percentile 0.240, p = 0.51864 (descriptive)
+  L             skill  0.215   R2 0.511   surrogates median 0.146, 95th percentile 0.222, p = 0.07999 (descriptive)
+  L+time        skill  0.228
+  training-mean skill  0.178
+  NP            skill  0.298   R2 0.772
+  L better than time-only in 90%, than T-only in 86%, than both in 64 configurations
+
+median skill of L per measure: PE 0.31, LZC78 0.50, RSE4 0.53, RSR 0.53, ACI 0.16, AEI 0.08, LogBandEnergy 0.40, SpectralEntropy 0.07, SpectralFlatness 0.07, TemporalEntropy 0.16
+nonlinear minus conventional, T-only: 0.229 (surrogates median 0.049, 95th percentile 0.199, 2094 at least as large, p = 0.02095; descriptive)
+nonlinear minus conventional, L_time: 0.314 (surrogates median 0.265, 95th percentile 0.323, 9659 at least as large, p = 0.09660; descriptive)
+nonlinear minus conventional, L: 0.360 (surrogates median 0.196, 95th percentile 0.283, 22 at least as large, p = 0.00023; primary)
+
+temperature surrogates: correlation with the real course median -0.10 (IQR -0.39 to +0.40), 1.1% with r >= 0.9; peak at occasion 5 in 3%; real course ends -1.7 C from its start
+NP: bandwidth per fold [0.75, 1.0, 0.75, 0.75, 0.75] d, 0.75 d for the mean trajectory, 8.8 effective degrees of freedom
+NP minus L: above +0.10 in 16 configurations (13 conventional), below -0.05 in 2; median skill NP/L by measure: PE 0.42/0.31, LZC78 0.48/0.50, RSE4 0.53/0.53, RSR 0.52/0.53, ACI 0.23/0.16, AEI 0.12/0.08, LogBandEnergy 0.41/0.40, SpectralEntropy 0.09/0.07, SpectralFlatness 0.08/0.07, TemporalEntropy 0.27/0.16
+residuals (nonlinear): time-only lag-1 0.51, Ljung-Box p < 0.05 in 69%; T-only lag-1 0.52, Ljung-Box p < 0.05 in 56%; L lag-1 0.24, Ljung-Box p < 0.05 in 25%
+residuals (conventional): time-only lag-1 0.32, Ljung-Box p < 0.05 in 40%; T-only lag-1 0.35, Ljung-Box p < 0.05 in 33%; L lag-1 0.23, Ljung-Box p < 0.05 in 19%
+bucket agreement (median pairwise Spearman): nonlinear 0.57, conventional 0.33
+redundant pairs (|rho| >= 0.95): 24 within bands, 1 of one measure between bands
+flat spectra: median entropy 0.987-0.997, median flatness 0.955-0.988, bins [26, 44, 87], v from entropy / v from flatness 0.88-0.96
+sensitivity (19 settings): nonlinear median skill of L 0.404-0.498; L above time-only in 20 and above L_time in 20 of 20
+broadband conventional: skill of L 0.224 (surrogates median 0.153, 95th percentile 0.238, p = 0.107); nonlinear minus broadband 0.261 (surrogates median 0.131, 95th percentile 0.206, p = 0.003)
+
+FURTHER CHECKS
+nonlinear: L_time 0.397 (surrogate median 0.369, p = 0.162); L better than L_time in 26/32, median gain per held-out bucket +0.027, +0.042, +0.049, +0.040, +0.046
+  conditional test (3298 surrogates with the real break, median r 0.65): surrogate median 0.277 (95th percentile 0.440), observed 0.485, p = 0.001; L + linear time 0.493
+conventional: L_time 0.084 (surrogate median 0.099, p = 0.678); L better than L_time in 41/48, median gain per held-out bucket +0.051, +0.023, +0.016, +0.035, +0.039
+  conditional test (3298 surrogates with the real break, median r 0.65): surrogate median 0.074 (95th percentile 0.129), observed 0.124, p = 0.078; L + linear time 0.145
+nonlinear: L with the training-mean temperature 0.480 against 0.485 (median paired difference 0.0040, largest 0.016)
+conventional: L with the training-mean temperature 0.122 against 0.124 (median paired difference 0.0015, largest 0.020)
+bucket deviation from the mean temperature: median 0.16 C, largest 1.26 C; mean course 26.2-39.4 C
+nonlinear skill of L by phase: heating 0.70, cooling 0.42; heating occasions carry 21% of SSE0 and 32% of the explained part (23 heating and 127 cooling values)
+conventional skill of L by phase: heating 0.39, cooling 0.08; heating occasions carry 8% of SSE0 and 33% of the explained part (23 heating and 127 cooling values)
+nonlinear heating jackknife, sign unchanged: b 94%, d 81%, e 84%
+conventional heating jackknife, sign unchanged: b 92%, d 60%, e 90%
+L + afternoon/evening, nonlinear: skill -0.001, R2 +0.000, gain/loss 10/22, max/min +0.004/-0.023
+L + afternoon/evening, conventional: skill +0.014, R2 +0.057, gain/loss 18/30, max/min +0.027/-0.028
+L + mains hum, nonlinear: skill -0.006, R2 +0.002, gain/loss 11/21, max/min +0.028/-0.019
+L + mains hum, conventional: skill -0.002, R2 +0.024, gain/loss 23/25, max/min +0.033/-0.046
+mains hum present in 53% of the analysed recordings
+between buckets within occasions, nonlinear: gamma 0.86 (permutation median 0.01, 95th percentile 0.65, p = 0.0129); sign as predicted in 81% of 32 configurations
+between buckets within occasions, conventional: gamma 1.27 (permutation median 0.02, 95th percentile 1.21, p = 0.0413); sign as predicted in 79% of 48 configurations
+between buckets within occasions, all: gamma 1.03 (permutation median 0.01, 95th percentile 0.80, p = 0.0149); sign as predicted in 80% of 80 configurations
+temperature deviations from the occasion mean: median |dev| 0.16 C, sd 0.36 C, largest 1.14 C (150 values)
+recording order A-E in 31/31 sessions; first to last start 60 min (median)
+
+BAND ENERGY (Limitations)
+nonlinear measure-band pairs with |rho| to log band energy >= 0.95: 5/32 (PE 512-1024 Hz, LZC78 64-128 Hz, LZC78 128-256 Hz, LZC78 256-512 Hz, LZC78 8192-16384 Hz); >= 0.85: 12/32
+log band energy, bucket mean, last 3 minus first 3 occasions (dB): 64 +7.3, 128 +9.7, 256 +10.1, 512 +8.1, 1024 +3.8, 2048 +0.9, 4096 +0.5, 8192 -0.4
+range over the cycle (dB): 64 10.4, 128 12.9, 256 15.7, 512 14.3, 1024 7.7, 2048 3.3, 4096 2.1, 8192 1.0
+per bucket, last minus first (dB, min-max): 64 +5.1/+8.1, 128 +5.4/+13.6, 256 +4.3/+16.5, 512 +4.4/+15.0, 1024 -0.2/+10.3, 2048 -0.1/+3.9, 4096 -0.4/+2.3, 8192 -0.8/-0.1
+
+WITHOUT THE HIGHEST BAND (8192-16384 Hz)
+nonlinear, all bands (32): skill time-only 0.329, T-only 0.300, L_time 0.397, L 0.485, NP 0.500; L better than time-only/T-only/L_time in 30/29/26; surrogate median 0.291, p = 0.00003
+nonlinear, without 8192-16384 Hz (28): skill time-only 0.319, T-only 0.286, L_time 0.391, L 0.480, NP 0.493; L better than time-only/T-only/L_time in 26/25/22; surrogate median 0.284, p = 0.00002
+conventional, all bands (48): skill time-only 0.067, T-only 0.071, L_time 0.084, L 0.124, NP 0.178; L better than time-only/T-only/L_time in 42/40/41; surrogate median 0.085, p = 0.20601
+conventional, without 8192-16384 Hz (42): skill time-only 0.065, T-only 0.067, L_time 0.071, L 0.109, NP 0.164; L better than time-only/T-only/L_time in 36/35/36; surrogate median 0.078, p = 0.21924
+
+CROSS-PREDICTION BETWEEN THE GROUPS (Redundancy; ridge, held-out buckets)
+conventional -> nonlinear (48 predictors, own band included): median skill 0.845 (range 0.353 to 0.967); per target measure: PE 0.73, LZC78 0.94, RSE4 0.80, RSR 0.82
+conventional -> nonlinear (42 predictors, own band excluded): median skill 0.723 (range 0.104 to 0.911); per target measure: PE 0.38, LZC78 0.81, RSE4 0.75, RSR 0.72
+nonlinear -> conventional (32 predictors, own band included): median skill 0.654 (range 0.043 to 0.974); per target measure: ACI 0.80, AEI 0.42, LogBandEnergy 0.91, SpectralEntropy 0.61, SpectralFlatness 0.61, TemporalEntropy 0.80
+nonlinear -> conventional (28 predictors, own band excluded): median skill 0.546 (range -0.005 to 0.898); per target measure: ACI 0.72, AEI 0.40, LogBandEnergy 0.79, SpectralEntropy 0.32, SpectralFlatness 0.35, TemporalEntropy 0.70
+runtime 12.1 min

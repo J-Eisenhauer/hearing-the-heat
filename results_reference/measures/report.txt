@@ -1,0 +1,3 @@
+150 recordings of 11.5-15.0 min; discarded start 1.0-4.5 min (median 2.8 min)
+mains hum present in 53% of the recordings
+runtime 214 min

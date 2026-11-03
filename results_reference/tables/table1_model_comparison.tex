@@ -1,0 +1,14 @@
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{Nonlinear (32)} & \multicolumn{3}{c}{Conventional (48)}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Model & $R^2$ & skill & $p$ & $R^2$ & skill & $p$\\
+\midrule
+time-only & 0.545 & 0.329 & -- & 0.203 & 0.067 & --\\
+temperature-only & 0.513 & 0.300 & 0.020 & 0.204 & 0.071 & 0.094\\
+L$_{\mathrm{time}}$ & 0.685 & 0.397 & 0.162 & 0.310 & 0.084 & 0.678\\
+L & 0.810 & 0.485 & \textbf{0.00003} & 0.360 & 0.124 & \textbf{0.206}\\
+\midrule
+NP & 0.887 & 0.500 & -- & 0.687 & 0.178 & --\\
+\bottomrule
+\end{tabular}
