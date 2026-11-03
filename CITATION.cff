@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article."
+title: "Hearing the heat: code and data"
+authors:
+  - family-names: Eisenhauer
+    given-names: Jakob
+version: 1.2.0
+license: MIT
+date-released: 2026-10-30
+preferred-citation:
+  type: article
+  title: "Hearing the heat: a proof-of-concept study of nonlinear sound measures for distinguishing phases of rapid organic decomposition"
+  authors:
+    - family-names: Eisenhauer
+      given-names: Jakob
