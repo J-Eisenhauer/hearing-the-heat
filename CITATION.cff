@@ -1,15 +1,45 @@
 cff-version: 1.2.0
-message: "If you use this code or data, please cite the article."
-title: "Hearing the heat: code and data"
+message: "If you use this code, please cite the article and this software archive."
+type: software
+title: "Hearing the heat: analysis code"
+abstract: >-
+  Analysis code for "Hearing the heat: a proof-of-concept study of nonlinear sound
+  measures for distinguishing phases of rapid organic decomposition". Computes four
+  nonlinear complexity measures and six conventional ecoacoustic indices in eight
+  octave bands from 150 soil-probe recordings, fits temperature and time models with
+  leave-one-bucket-out cross-validation, runs the temperature-surrogate tests and
+  reproduces all numbers, tables and figures of the article and its supplement.
 authors:
   - family-names: Eisenhauer
     given-names: Jakob
+    affiliation: "Department of Earth and Environmental Sciences, Lund University"
+    orcid: "https://orcid.org/0009-0009-7121-0615"
+repository-code: "https://github.com/J-Eisenhauer/hearing-the-heat"
 version: 1.2.0
-license: MIT
 date-released: 2026-11-04
+license: MIT
+keywords:
+  - soil acoustics
+  - ecoacoustic indices
+  - permutation entropy
+  - Lempel-Ziv complexity
+  - composting
+  - surrogate data
+references:
+  - type: dataset
+    title: "Hearing the heat: soil probe recordings of rapid organic decomposition (150 x 10 min)"
+    authors:
+      - family-names: Eisenhauer
+        given-names: Jakob
+    year: 2026
+    publisher:
+      name: Zenodo
+    doi: 10.5281/zenodo.23891122
 preferred-citation:
   type: article
   title: "Hearing the heat: a proof-of-concept study of nonlinear sound measures for distinguishing phases of rapid organic decomposition"
   authors:
     - family-names: Eisenhauer
       given-names: Jakob
+      orcid: "https://orcid.org/0009-0009-7121-0615"
+  year: 2026
